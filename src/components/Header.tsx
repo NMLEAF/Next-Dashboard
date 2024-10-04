@@ -9,7 +9,7 @@ const Header = () => {
         <input
           type="text"
           placeholder="Search..."
-          className="w-[200px] p-2 bg-transparent outline-none"
+          className="w-[200px] p-2 bg-transparent outline-none text-gray-500"
         />
       </div>
 
