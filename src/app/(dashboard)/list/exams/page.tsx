@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -54,15 +55,19 @@ const ExamListPage = () => {
       <td className="hidden pr-4 md:table-cell">{item.date}</td>
       <td>
         <div className="flex items-center gap-2">
-          <Link href={`/list/teachers/${item.id}`}>
+          {/* <Link href={`/list/teachers/${item.id}`}>
             <button className="w-7 h-7 flex items-center justify-center bg-eSky rounded-full">
               <Image src="/edit.png" alt="view" width={16} height={16} />
             </button>
-          </Link>
+          </Link> */}
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center bg-ePurple rounded-full">
-              <Image src="/delete.png" alt="view" width={16} height={16} />
-            </button>
+            <>
+              <FormModal table="exam" type="update" data={item} />
+              <FormModal table="exam" type="delete" id={item.id} />
+            </>
+            // <button className="w-7 h-7 flex items-center justify-center bg-ePurple rounded-full">
+            //   <Image src="/delete.png" alt="view" width={16} height={16} />
+            // </button>
           )}
         </div>
       </td>
@@ -84,9 +89,10 @@ const ExamListPage = () => {
               <Image src="/sort.png" alt="Filter" width={14} height={14} />
             </button>
             {role === "admin" && (
-              <button className="w-8 h-8 flex items-center justify-center rounded-full bg-eYellow">
-                <Image src="/plus.png" alt="Filter" width={14} height={14} />
-              </button>
+              // <button className="w-8 h-8 flex items-center justify-center rounded-full bg-eYellow">
+              //   <Image src="/plus.png" alt="Filter" width={14} height={14} />
+              // </button>
+              <FormModal table="exam" type="create" />
             )}
           </div>
         </div>
