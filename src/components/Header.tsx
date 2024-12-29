@@ -1,3 +1,4 @@
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 
 const Header = () => {
@@ -27,17 +28,18 @@ const Header = () => {
         </div>
 
         <div className="flex flex-col">
-          <span className="text-xs font-medium leading-3">John Doe</span>
+          <span className="text-xs font-medium leading-3">Abebe Feleke</span>
           <span className="text-[10px] text-gray-500 text-right">Admin</span>
         </div>
 
-        <Image
+        {/* <Image
           src="/avatar.png"
           alt="avatar"
           width={36}
           height={36}
           className="rounded-full"
-        />
+        /> */}
+        <UserButton />
       </div>
     </div>
   );

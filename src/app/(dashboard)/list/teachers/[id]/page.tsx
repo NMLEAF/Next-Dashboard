@@ -28,7 +28,7 @@ const SingleTeacherPage = () => {
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-xl font-semibold">Lenoard Synder</h1>
+              <h1 className="text-xl font-semibold">Tewodros ALemu</h1>
               <p className="text-gray-500 text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>

@@ -32,7 +32,7 @@ const AdminPage = () => {
 
         {/* BOTTOM CHART */}
         <div className="w-full h-[450px]">
-          <FinanceChart />
+          {/* <FinanceChart /> */}
         </div>
       </div>
 

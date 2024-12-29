@@ -12,22 +12,22 @@ type Value = ValuePiece | [ValuePiece, ValuePiece];
 const events = [
   {
     id: 1,
-    title: "Lorem ipsum",
+    title: "Special event",
     time: "12:00 PM - 2:00 PM",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    description: "Tomorrow we will have a special event.",
   },
-  {
-    id: 2,
-    title: "Lorem ipsum",
-    time: "12:00 PM - 2:00 PM",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    id: 3,
-    title: "Lorem ipsum",
-    time: "12:00 PM - 2:00 PM",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-  },
+  // {
+  //   id: 2,
+  //   title: "Lorem ipsum",
+  //   time: "12:00 PM - 2:00 PM",
+  //   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Lorem ipsum",
+  //   time: "12:00 PM - 2:00 PM",
+  //   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+  // },
 ];
 
 const EventCalendar = () => {
@@ -58,8 +58,7 @@ const EventCalendar = () => {
               <span className="text-xs text-gray-300">{event.time}</span>
             </div>
             <p className="mt-2 text-sm text-gray-400">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-              numquam.
+             {event.description}
             </p>
           </div>
         ))}
